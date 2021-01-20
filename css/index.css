@@ -1,0 +1,236 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Play&display=swap');
+/* font-family: 'Monoton', cursive;
+font-family: 'Play', sans-serif; */
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    background: #111;
+}
+
+#vid {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+#vid video {
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#header {
+    width: 700px;
+    height: 100%;
+    position: fixed;
+    top: 0; left: -420px;
+    background: linear-gradient(-45deg, #e6fc55, #b9fb05, #97e031);
+    transform: skew(-40deg);
+}
+#header h1 {
+    position: absolute;
+    top: 40px; right: 150px;
+    transform: skew(40deg);
+}
+#header .nav {
+    position: absolute;
+    top: 200px;
+    right: 0;width: 220px;
+}
+#header .nav .depth1 > li {
+    color: #222;
+    text-align: right;
+    font-size: 18px;
+    font-weight:bold;
+    transition: all 0.4s;
+    position: relative;
+}
+#header .nav .depth1 > li >a {
+    padding:15px 40px 15px 0px;
+    display: block;
+    transform: skew(40deg);
+    /* transform은 block요소에서만 적용 */
+}
+#header .nav .depth1 > li:hover {
+    background: #000;
+    color: #fff;
+}
+#header .nav .depth1 > li >a >i {
+    margin-right: 15px;
+}
+#header .nav .depth1 > li:first-child {
+    background: #000;
+    color: #fff;
+}
+#header .depth2 {
+    position: absolute;
+    top: 0; left: 0;
+    width: 80%;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.3s;
+}
+#header .nav .depth1 >li:hover .depth2{
+    opacity: 0.8;
+    left: 100%;
+}
+#header .nav .depth1 >li:first-child .depth2{
+    opacity: 0.8;
+    left: 100%;
+}
+#header .depth2 >li {
+    background: #222;
+    color: #fff;
+    border-bottom: 1px solid #b9fb05;
+    margin-bottom: 3px;
+}
+
+#header .depth2 >li > a {
+    padding: 10px 0;
+    display: block;
+    transform:skew(40deg);
+    font-size:16px;
+}
+#header .depth2 >li:hover {
+    background: #b9fb05;
+    color:#222
+}
+#section .sns {
+    position: fixed;
+    top: 60px;
+    right: 50px;
+    font-size: 25px;
+    color: #b9fb05;
+    opacity: 0.5;
+}
+#section .sns a {
+    margin-left:20px;
+    display: inline-block;
+    transition: all 0.4s;
+}
+#section .sns a:hover {
+    transform: scale(1.4);
+    opacity: 1;
+}
+#section .txtbox {
+    position: fixed;
+    top: 200px; right: 70px;
+    font-size: 50px;
+}
+#section .txtbox  p:first-child {
+    font-size: 160px;
+    font-family: 'Monoton', cursive;
+    color: #b9fb05;
+}
+#section .txtbox em {
+    font-size: 50px;
+    font-family: 'Play', sans-serif;
+    color: #fff;
+}
+#section .txtbox p:last-child {
+    font-size: 34px;
+    color: #bbb;
+    letter-spacing: -2px;
+}
+#section .txtbox strong {
+    margin-left: 20px;
+    color: #b9fb05;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#section .side {
+    position: fixed;
+    width: 800px;
+    height: 100%;
+    background: #111;
+    opacity: 0.5;
+    transform: skew(-40deg);
+    top: 0; right:-800px;
+    transition: all 0.4s;
+}
+#section .side:hover {
+    right: -500px;
+    opacity: 0.8;
+}
+#section .side .con {
+    width: 400px;
+    height: 100%;
+    position: absolute;
+    left: 135px;
+    background: #000;
+    transition: all 0.4s 0.1s;
+}
+#section .side:hover .con{
+    left:50px;
+} 
+#section .side .con p {
+    position: absolute;
+    left: 50px; bottom:50px;
+    color: #a0bd50;
+    transform: translate(200px);
+}#section .side:hover .con p {
+    transform: translate(0px);
+}
+#section .side .con p:first-child {
+    bottom: 270px;
+    transition: all 0.4s;
+}
+#section .side .con p:nth-child(2){
+    bottom: 160px;
+    transition: all 0.8s;
+}
+#section .side .con p:nth-child(3){
+    transition: all 1.2s;
+}
+#section .side .con p em {
+    display: inline-block;
+    transform: skew(40deg);
+    font: bold 16px/1.7 arial;
+    opacity:1;
+}
+#section .side .con > p img {
+    opacity: 0.3;
+    transition: all 0.4s;
+}
+#section .side .con > p img:hover {
+    opacity: 1;
+}
+#section .side .arrow {
+    position: absolute;
+    bottom: 40px;
+    left: 100px;
+    width: 150px;
+    font-size: 60px;
+    color: #b9fb05;
+    transform: skew(40deg);
+}
+#section .side .arrow i{
+    position: absolute; 
+    bottom: 0; right: 0;
+    animation:ani 1.5s infinite linear;
+}
+#section .side:hover .arrow {
+    display: none;
+}
+#section .side .arrow i:nth-child(1) {
+    animation-delay:0s;
+}
+#section .side .arrow i:nth-child(2) {
+    animation-delay:0.5s;
+}
+#section .side .arrow i:nth-child(3) {
+    animation-delay:1s;
+}
+@keyframes ani {
+    0% { }
+    100% {
+        opacity: 0;
+        transform: scale(1.5);
+        right:100px;
+    }
+}
